@@ -39,6 +39,7 @@ class UtilityTest extends PHPUnit_Framework_TestCase
         $this->assertSame('amount=1299', Utility::prepareParameters([ 'amount' => 12.99 ]));
 
         $this->assertSame('amount=12', Utility::prepareParameters([ 'amount' => 12, 'currency' => 'JPY' ]));
+        $this->assertSame('amount=50', Utility::prepareParameters([ 'amount' => 50, 'currency' => 'COP' ]));
         $this->assertSame('amount=1200', Utility::prepareParameters([ 'amount' => 12, 'currency' => 'USD' ]));
         $this->assertSame('amount=500', Utility::prepareParameters([ 'amount' => 500, 'currency' => 'CLP' ]));
         $this->assertSame('amount=50000', Utility::prepareParameters([ 'amount' => 500, 'currency' => 'SEK' ]));
