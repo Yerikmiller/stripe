@@ -51,7 +51,7 @@ class Utility
 
     protected static function needsAmountConversion(array $parameters)
     {
-        $zeroDecimalCurrencies = [ 'BIF', 'DJF', 'JPY', 'KRW', 'PYG', 'VND', 'XAF', 'XPF', 'CLP', 'GNF', 'KMF', 'MGA', 'RWF', 'VUV', 'XOF' ];
+        $zeroDecimalCurrencies = [ 'BIF', 'DJF', 'JPY', 'KRW', 'PYG', 'VND', 'XAF', 'XPF', 'CLP', 'GNF', 'KMF', 'MGA', 'RWF', 'VUV', 'XOF', 'COP' ];
 
         return !isset($parameters['currency']) || (isset($parameters['currency']) && !in_array($parameters['currency'], $zeroDecimalCurrencies));
     }
